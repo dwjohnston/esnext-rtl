@@ -11,6 +11,8 @@ it('should call the click handler', () => {
         />
     );
 
-    userEvent.click(screen.getByTestId('button'));
+    userEvent.click(screen.getByRole('button'));
+    // OR, as a recommended escape hatch: 
+    // userEvent.click(screen.getByTestId('button'));
     expect(mockClickHandler).toHaveBeenCalled();
 });

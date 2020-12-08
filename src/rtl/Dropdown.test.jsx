@@ -18,7 +18,8 @@ it('should select the correct items', () => {
         </select >
     );
 
-    userEvent.selectOptions(screen.getByTestId('select'), '1');
-
+    userEvent.selectOptions(screen.getByRole('combobox'), '1');
+    // OR, as a recommended escape hatch: 
+    // userEvent.selectOptions(screen.getByTestId('select'), '1');
     expect(mockChangeHandler).toHaveBeenCalledWith('1')
 });
