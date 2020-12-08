@@ -5,8 +5,8 @@ import userEvent from '@testing-library/user-event';
 it('should display the text entered', () => {
     const mockChangeHandler = jest.fn();
     render(
-        <textarea
-            data-testid="textarea"
+        <input
+            data-testid="textfield"
             onChange={(e) => mockChangeHandler(e.target.value)}
         />
     );

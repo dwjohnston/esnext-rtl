@@ -4,8 +4,8 @@ import { mount } from 'enzyme';
 it('should call the click handler', () => {
     const mockChangeHandler = jest.fn();
     const component = mount(
-        <textarea
-            data-testid="textarea"
+        <input
+            data-testid="textfield"
             onChange={(e) => mockChangeHandler(e.target.value)}
         />
     );
