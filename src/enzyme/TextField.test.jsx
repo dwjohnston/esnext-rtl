@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-it('should call the click handler', () => {
+it('should call the change handler when entering text', () => {
     const mockChangeHandler = jest.fn();
     const component = mount(
         <input
